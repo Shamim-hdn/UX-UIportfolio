@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerbs Buddy Case Study</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Internal CSS for Navigation Buttons */
+        .btn-border {
+            border: 2px solid #000;  /* Black border */
+            color: #000;             /* Black text */
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .btn-border:hover {
+            background-color: #000; /* Black background on hover */
+            color: #fff;            /* White text on hover */
+        }
+        
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+
+        /* Additional styling for case study content */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 10px 0; /* Reduced margin for headings */
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        h2 {
+            color: #1d157a;
+        }
+
+        h3 {
+            color: #0e4eef;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .case-study {
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px; /* Reduced margin between sections */
+        }
+
+        /* Styles for images and videos */
+        .section-image, .section-video {
+            border: #343a40 solid;
+            width: 100%;
+            max-width: 800px; /* Ensures it doesn't exceed the content width */
+            margin-top: 10px; /* Reduced margin for images and videos */
+            border-radius: 8px;
+            display: block;
+            max-height: auto; /* Set the maximum height for images */
+            object-fit: cover; /* Ensure the images cover the space without distortion */
+            cursor: pointer; /* Indicate that images are clickable */
+        }
+
+        .decorative-tag {
+            display: block;
+            margin-top: 10px; /* Reduced margin for tags */
+            padding: 10px 15px;
+            background-color: #e9ecef;
+            color: #343a40;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* Full-screen overlay styles */
+        .overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Dark background */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        /* Close button styles */
+        .overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            color: #000;
+            padding: 10px 15px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        @media (max-width: 768px) {
+            /* Ensure responsive images and videos */
+            .section-image, .section-video {
+                width: 100%;
+                height: auto;
+                max-height: 250px; /* Adjust the max height for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation-buttons">
+        <a href="../index.html" class="btn-border">Back to Home</a>
+    </div>
+    <div class="case-study">
+        <h1>Parent Hub Case Study</h1>
+
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>This report will discuss the web application called Parent Hub, designed with accessibility considerations in mind. This web application was created to promote connections between local parents. The goal of the Parent Hub is to help parents in the community support one another and make the parenting journey a happier one for themselves and their children.</p>
+            <img src="../assets/Desktop - 54.png" alt="Solution Image" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+        </section>
+        <section class="problem">
+            <h2>The Problem</h2>
+            <p>The academic literature in disability studies provides extensive information on the importance of accessibility as well as inclusive design. We still have a long way to go in terms of accessibility, and there are still too many barriers preventing people with disabilities from fully participating online.</p>
+        </section>
+        <section class="solution">
+            <h2>Proposed Solution</h2>
+            <p>The use of technology is possible to reach accessibility. The whole society also benefits from this. For instance, captions help people with hearing impairment and others who are in noisy situations. People with vision impairments and older users benefit from adequate colour contrast. Sensible design decisions are still important, despite the opportunities that technology provides to increase engagement. To ensure that the Parent Hub app meets the diverse needs of users and provides equal access for individuals with disabilities, the design process emphasized principles of inclusive and universal design based on WCAG 2.1.</p>
+            <video class="section-video" poster="../assets/Desktop - 43.png" controls>
+                <source src="../assets/Untitled_video2_Made_with_Clipchamp_V3 (online-video-cutter.com).mp4" type="video/mp4"> <!-- Placeholder video URL -->
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <div class="subsection">
+            <h2>Research</h2>
+            <p>To ensure that the Parent Hub app meets the diverse needs of users and provides equal access for individuals with disabilities, the design process emphasized principles of inclusive and universal design based on WCAG 2.1. In the early stages, Personas representing potential users with varying impairments were created to guide the development. Prototypes were gradually developed based on academic research on accessible user interfaces and Internet accessibility standards. At the end of the design phase, users tested the final Figma design to improve accessibility.</p>
+        </div>
+        <section class="design-process">
+            <h2>Design Process</h2>
+            <p>The design process for Parent Hub was methodical and user-centered, ensuring that accessibility was prioritized at every stage. Key steps included:</p>
+            <ul>
+                <li><strong>Requirement Gathering:</strong> Engaged with parents, including those with disabilities, to understand their needs and preferences. Conducted surveys and interviews to gather insights.</li>
+                <li><strong>Personas and Scenarios:</strong> Created detailed personas representing users with different disabilities. Developed scenarios to explore how these users would interact with the app.</li>
+                <li><strong>Wireframing and Prototyping:</strong> Developed wireframes and prototypes with a focus on accessibility. Used tools like Figma to create high-fidelity designs that incorporated feedback from stakeholders.</li>
+                <li><strong>Accessibility Audit:</strong> Conducted an accessibility audit based on WCAG 2.1 guidelines. Identified potential barriers and made necessary adjustments to design and functionality.</li>
+                <li><strong>Iterative Design:</strong> Adopted an iterative approach, continuously refining the design based on user feedback and testing results. This ensured that the app remained user-friendly and accessible.</li>
+            </ul>
+            <span class="decorative-tag">Connect More parents to each other</span>
+            <img src="../assets/sk.png" alt="Solution Image" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+            <div class="subsection">
+                <h2>Features</h2>
+                <p>The key features of the app are:</p>
+                <ul>
+                    <li><strong>Local Event Connection:</strong> Parents can use the Parent Hub website to find and attend a variety of regional events that match their interests and preferences. The platform also serves as a hub for neighborhood parenting events, allowing parents to find and connect with the possible events near them, from workshops and seminars to play dates and community gatherings.</li>
+                    <li><strong>Group Formation and Collaboration:</strong> Parent Hub promotes the creation of parent communities around shared interests, such as particular age groups, parenting philosophies, or hobbies. As a result of the application's group creation and communication features, parents can connect with others who share their interests, share advice, and plan meetups or online chats in the area.</li>
+                    <li><strong>Accessibility and Inclusion:</strong> Accessibility is one of the most important principles of the Parent Hub website. I tried to ensure that users with various disabilities can use this program without any problems. All parents—regardless of their physical, visual, cognitive, or hearing abilities—will have a great experience with this app because I put best practices and inclusive design principles into practice in this web application.</li>
+                </ul>
+                <img src="../assets/fea.png" alt="Solution Image" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+            </div>
+            
+        </section>
+        <section class="user-testing">
+            <h2>User Testing</h2>
+            <p>User testing was a crucial component of the development process for Parent Hub. To ensure the app was truly accessible, the following steps were taken:</p>
+            <ul>
+                <li><strong>Beta Testing:</strong> Released a beta version of the app to a group of diverse users, including those with various disabilities. Collected feedback on usability and accessibility.</li>
+                <li><strong>Accessibility Testing:</strong> Conducted thorough accessibility testing using tools such as screen readers, color contrast analyzers, and keyboard navigation checks. Ensured compliance with WCAG 2.1 standards.</li>
+                <li><strong>User Feedback Sessions:</strong> Organized feedback sessions with users to gather insights on their experience. Identified pain points and areas for improvement.</li>
+                <li><strong>Continuous Improvement:</strong> Implemented changes based on user feedback and retested the app to ensure improvements were effective. Maintained an ongoing feedback loop to keep the app updated and accessible.</li>
+                <img src="../assets/feed.png" alt="Solution Image" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+            </ul>
+        </section>
+        <section class="next-steps">
+    <ul><h2>Next Steps</h2>
+        <p>The Parent Hub app will continue to evolve to meet the needs of its users and maintain high accessibility standards. The following steps are planned:</p>
+        <li><strong>Continuous Monitoring:</strong> Regularly monitor user feedback and accessibility reports to identify and address any new issues that arise.</li>
+        <li><strong>Feature Enhancements:</strong> Introduce new features based on user feedback and emerging needs, ensuring they adhere to accessibility guidelines.</li>
+        <li><strong>Ongoing Training:</strong> Provide ongoing training for the development team on the latest accessibility standards and best practices to ensure continued compliance.</li>
+        <li><strong>Community Engagement:</strong> Foster an active community of users who can share their experiences and provide insights to inform future updates and improvements.</li>
+        <li><strong>Regular Audits:</strong> Conduct regular accessibility audits to ensure the app remains compliant with WCAG standards and continues to provide an inclusive experience for all users.</li>
+    </ul>
+        </section>
+    </body>
+    </html>
+
+        <div class="navigation-buttons">
+            <button onclick="scrollToTop()" class="btn-border">Scroll to Top</button>
+        </div>
+    </div>
+
+    <!-- Full-screen Image Overlay -->
+    <div id="image-overlay" class="overlay">
+        <button class="close-btn" onclick="closeOverlay()">Close</button>
+        <img src="" alt="Full-Size Image">
+    </div>
+
+    <script>
+        // JavaScript for opening and closing the full-screen image overlay
+        function openOverlay(image) {
+            const overlay = document.getElementById('image-overlay');
+            const overlayImage = overlay.querySelector('img');
+            overlayImage.src = image.src;
+            overlay.style.display = 'flex';
+        }
+
+        function closeOverlay() {
+            const overlay = document.getElementById('image-overlay');
+            overlay.style.display = 'none';
+        }
+
+        // Function to scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

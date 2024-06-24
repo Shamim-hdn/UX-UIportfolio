@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSpace Case Study</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Internal CSS for Navigation Buttons */
+        .btn-border {
+            border: 2px solid #000;  /* Black border */
+            color: #000;             /* Black text */
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .btn-border:hover {
+            background-color: #000; /* Black background on hover */
+            color: #fff;            /* White text on hover */
+        }
+        
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+
+        /* Additional styling for case study content */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 10px 0; /* Reduced margin for headings */
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        h2 {
+            color: #1d157a;
+        }
+
+        h3 {
+            color: #0e4eef;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+        
+        .case-study {
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px; /* Reduced margin between sections */
+        }
+
+        /* Styles for images and videos */
+        .section-image, .section-video {
+            border: #343a40 solid;
+            width: 100%;
+            max-width: 800px; /* Ensures it doesn't exceed the content width */
+            margin-top: 10px; /* Reduced margin for images and videos */
+            border-radius: 8px;
+            display: block;
+            max-height: auto; /* Set the maximum height for images */
+            object-fit: cover; /* Ensure the images cover the space without distortion */
+            cursor: pointer; /* Indicate that images are clickable */
+        }
+
+        .decorative-tag {
+            display: block;
+            margin-top: 10px; /* Reduced margin for tags */
+            padding: 10px 15px;
+            background-color: #e9ecef;
+            color: #343a40;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* Full-screen overlay styles */
+        .overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Dark background */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        /* Close button styles */
+        .overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            color: #000;
+            padding: 10px 15px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        @media (max-width: 768px) {
+            /* Ensure responsive images and videos */
+            .section-image, .section-video {
+                width: 100%;
+                height: auto;
+                max-height: 250px; /* Adjust the max height for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation-buttons">
+        <a href="../index.html" class="btn-border">Back to Home</a>
+    </div>
+    <div class="case-study">
+        <h1>AutoSpace Case Study</h1>
+
+        <section>
+            <h2>Introduction</h2>
+            <p><strong>AutoSpace</strong> is an innovative platform designed to enhance the automotive repair and training experience through augmented reality (AR). It targets both car owners and automotive trainees, providing interactive solutions to bridge the gap in technical knowledge and streamline the repair process.</p>
+        </section>
+
+        <section>
+            <h2>The Problem</h2>
+            <h3>Challenges Faced by Car Owners and Trainees</h3>
+            <p><strong>Car Owners</strong>: Many car owners lack the technical skills required for basic car maintenance and troubleshooting, leading to reliance on expensive professional services and extended downtimes for their vehicles.</p>
+            <p><strong>Trainees</strong>: Automotive trainees often face challenges due to the unavailability of supervisors and the complexity of modern vehicle technologies. This can hinder their learning and progression in the field.</p>
+            <img src="../assets/Research - Stats.png" alt="Research and Insights" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+        </section>
+
+        <section>
+            <h2>Research & Insights</h2>
+            <h3>Demographics and Key Findings</h3>
+            <p><strong>Survey Participants</strong>: Car Owners (50%), Trainers (27.5%), Trainees (17.5%).</p>
+            <p><strong>Key Insights</strong>:</p>
+            <ul>
+                <li>A significant portion of car owners are not familiar with immersive technologies like AR/VR.</li>
+                <li>Both trainees and car owners expressed a strong need for hands-on, step-by-step guidance for vehicle maintenance and repair.</li>
+            </ul>
+            <p><strong>Qualitative Feedback</strong>:</p>
+            <ul>
+                <li>Users desire intuitive AR guides that visually demonstrate the disassembly and reassembly of car components.</li>
+                <li>There is a high interest in chatbot assistance and gamified learning experiences.</li>
+            </ul>
+            <img src="../assets/Research - Surveys.png" alt="Research and Insights" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+        </section>
+
+        <section>
+            <h2>The Solution</h2>
+            <p><strong>AutoSpace</strong> leverages augmented reality to provide interactive, step-by-step tutorials and collaborative learning tools.</p>
+            <h3>For Car Owners</h3>
+            <ul>
+                <li><strong>AR-Based Tutorials</strong>: Interactive guides for routine maintenance and troubleshooting.</li>
+                <li><strong>Detailed Vehicle Information</strong>: Easy access to essential car details and diagnostics.</li>
+            </ul>
+            <video class="section-video" poster="../assets/HiFi - Car Owner 6.png" controls>
+                <source src="../assets/Untitled_Project_V1 (online-video-cutter.com).mp4" type="video/mp4"> <!-- Placeholder video URL -->
+                Your browser does not support the video tag.
+            </video>
+            <h3>For Trainees</h3>
+            <ul>
+                <li><strong>Collaborative Learning</strong>: Enables real-time interaction with supervisors and peers.</li>
+                <li><strong>Progress Tracking</strong>: Monitors and records learning milestones and task completion.</li>
+                <li><strong>Immersive Training</strong>: Visual, hands-on tutorials to enhance learning and retention.</li>
+            </ul>
+            <video class="section-video" poster="../assets/Presentation - 38.png" controls>
+                <source src="../assets/Untitled_video2_Made_with_Clipchamp_V2 (online-video-cutter.com).mp4" type="video/mp4"> <!-- Placeholder video URL -->
+                Your browser does not support the video tag.
+            </video>
+            
+        </section>
+
+        <section>
+            <h2>Design Process</h2>
+            <p>The design process for AutoSpace followed a user-centered approach, comprising the following stages:</p>
+            <ol>
+                <li><strong>Empathize</strong>: Understanding user needs through surveys and interviews.</li>
+                <li><strong>Define</strong>: Identifying key problems and user pain points.</li>
+                <li><strong>Ideate</strong>: Brainstorming potential solutions and features.</li>
+                <li><strong>Prototype</strong>: Developing low-fidelity sketches and wireframes.</li>
+                <li><strong>Test</strong>: Validating the design through user testing and feedback.</li>
+            </ol>
+            <span class="decorative-tag">Empowering Automotive Training with Augmented Reality</span>
+            <img src="../assets/Presentation - 131.png" alt="Solution Image" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+            <img src="../assets/Presentation - 133.png" alt="Solution Image" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+        </section>
+
+        <section>
+            <h2>Implementation</h2>
+            <h3>Development and Testing</h3>
+            <p><strong>Technologies Used</strong>: Microsoft Hololens 2 for immersive AR experiences and mobile applications for broader accessibility.</p>
+            <p><strong>User Interface</strong>: Designed with high contrast and minimalistic aesthetics to ensure clarity and ease of use in various environments.</p>
+            <p><strong>Interaction Methods</strong>: Incorporates touch, voice, and gesture controls to provide flexible interaction options for users.</p>
+            <img src="../assets/Presentation - 55.png" alt="Solution Image" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+            <img src="../assets/Presentation - 56.png" alt="Solution Image" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+        </section>
+
+        <section>
+            <h2>Results and Future Steps</h2>
+            <h3>Achievements</h3>
+            <ul>
+                <li><strong>User Engagement</strong>: High user engagement and positive feedback on the AR tutorials and collaborative features.</li>
+                <li><strong>Learning Outcomes</strong>: Significant improvement in trainees' confidence and competence in performing automotive repairs.</li>
+            </ul>
+            <h3>Next Steps</h3>
+            <ul>
+                <li><strong>Feature Expansion</strong>: Introducing more advanced diagnostic tools and enhanced interactive elements.</li>
+                <li><strong>Scalability</strong>: Expanding the platform's capabilities to include more vehicle types and repair scenarios.</li>
+                <li><strong>Partnerships</strong>: Collaborating with automotive training institutions and service providers to broaden user adoption.</li>
+            </ul>
+            <img src="../assets/Presentation - 169.png" alt="Solution Image" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+            <img src="../assets/Presentation - 172.png" alt="Solution Image" class="section-image" onclick="openOverlay(this)"> <!-- Placeholder image URL -->
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>AutoSpace represents a significant leap in the integration of augmented reality into automotive maintenance and training. By providing an interactive, user-friendly platform, it addresses the critical gaps in technical knowledge and training efficiency for both car owners and trainees.</p>
+        </section>
+
+        <div class="navigation-buttons">
+            <button onclick="scrollToTop()" class="btn-border">Scroll to Top</button>
+        </div>
+    </div>
+
+    <!-- Full-screen Image Overlay -->
+    <div id="image-overlay" class="overlay">
+        <button class="close-btn" onclick="closeOverlay()">Close</button>
+        <img src="" alt="Full-Size Image">
+    </div>
+
+    <script>
+        // JavaScript for opening and closing the full-screen image overlay
+        function openOverlay(image) {
+            const overlay = document.getElementById('image-overlay');
+            const overlayImage = overlay.querySelector('img');
+            overlayImage.src = image.src;
+            overlay.style.display = 'flex';
+        }
+
+        function closeOverlay() {
+            const overlay = document.getElementById('image-overlay');
+            overlay.style.display = 'none';
+        }
+
+        // Function to scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
